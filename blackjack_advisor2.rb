@@ -58,6 +58,15 @@ hard_hash_STAND = Hash.new("STAND")
 hard_hash_HIT = Hash.new("HIT")
 hard_hash_DUB = Hash.new("DOUBLE OR HIT")
 
+soft_hash_STAND = Hash.new("STAND")
+soft_hash_HIT = Hash.new("HIT")
+soft_hash_DUB = Hash.new("DOUBLE OR HIT")
+
+pair_hash_STAND = Hash.new("STAND")
+pair_hash_HIT = Hash.new("HIT")
+pair_hash_DUB = Hash.new("DOUBLE OR HIT")
+
+
 hard_hash_STAND["5"] = hard_hash_HIT
 hard_hash_STAND["5"] = hard_hash_HIT
 hard_hash_STAND["7"] = hard_hash_HIT
@@ -113,6 +122,35 @@ hard_hash_STAND["16"]["9"] = "HIT"
 hard_hash_STAND["16"]["10"] = "HIT"
 hard_hash_STAND["16"]["A"] = "HIT"
 
+=begin
+hard_hash_STAND["17"] = hard_hash_STAND
+hard_hash_STAND["18"] = hard_hash_STAND
+hard_hash_STAND["19"] = hard_hash_STAND
+hard_hash_STAND["20"] = hard_hash_STAND
+hard_hash_STAND["21"] = hard_hash_STAND
+=end
+
+
+soft_hash_STAND["13"] = soft_hash_HIT
+soft_hash_STAND["13"]["4"] = "DOUBLE"
+soft_hash_STAND["13"]["5"] = "DOUBLE"
+soft_hash_STAND["13"]["6"] = "DOUBLE"
+soft_hash_STAND["14"] = soft_hash_HIT
+soft_hash_STAND["14"]["4"] = "DOUBLE"
+soft_hash_STAND["14"]["5"] = "DOUBLE"
+soft_hash_STAND["14"]["6"] = "DOUBLE"
+soft_hash_STAND["15"] = soft_hash_HIT
+soft_hash_STAND["15"]["4"] = "DOUBLE"
+soft_hash_STAND["15"]["5"] = "DOUBLE"
+soft_hash_STAND["15"]["6"] = "DOUBLE"
+soft_hash_STAND["16"] = soft_hash_HIT
+soft_hash_STAND["16"]["4"] = "DOUBLE"
+soft_hash_STAND["16"]["5"] = "DOUBLE"
+soft_hash_STAND["16"]["6"] = "DOUBLE"
+soft_hash_STAND["17"] = soft_hash_HIT
+soft_hash_STAND["18"] = soft_hash_HIT
+soft_hash_STAND["19"] = soft_hash_HIT
+
 
 =begin
 hard_hash_STAND["13"] = hard_hash_HIT
@@ -147,8 +185,13 @@ hard_hash["9"] = {
 "14"
 "15"
 hard_hash["16"] =
-=end
 
+
+puts "Do you have a pair?"
+pair_ans = gets.chomp
+puts "Do you have an ace?"
+ace_ans = gets.chomp
+=end
 
 puts "What card do you have?"
 my_first_card = gets.chomp
@@ -159,7 +202,30 @@ my_total_number = my_total_number.to_s
 puts "What does the dealer have?"
 dealer_card = gets.chomp
 
+=begin
+if pair_ans.downcase == "yes"
+  puts pair_hash_STAND[my_total_number][dealer_card]
+elsif ace_ans.downcase == "yes"
+  puts ace_hash_STAND[my_total_number][dealer_card]
+else
+=end
+
+
+
+
+=begin
+if user_ans == pair
+  use pair_hash_STAND
+elsif user_ans == A
+  use soft_hash_STAND
+else
+  use hard_hash_STAND
+=end
+
+
+
 puts hard_hash_STAND[my_total_number][dealer_card]
+
 
 =begin
 hash = {"Mason" => {"home" =>"919",
