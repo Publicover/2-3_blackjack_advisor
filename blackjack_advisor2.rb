@@ -66,22 +66,68 @@ hard_hash_STAND["8"]["5"] = "Double"
 hard_hash_STAND["8"]["6"] = "Double"
 hard_hash_STAND["9"] = hard_hash_HIT
 hard_hash_STAND["9"]["2"] = "Double"
-=begin
 hard_hash_STAND["9"]["3"] = "Double"
 hard_hash_STAND["9"]["4"] = "Double"
 hard_hash_STAND["9"]["5"] = "Double"
 hard_hash_STAND["9"]["6"] = "Double"
-hard_hash_STAND["10"]["2"]
-hard_hash_STAND["10"]["3"]
-hard_hash_STAND["10"]["4"]
-hard_hash_STAND["10"]["5"]
-hard_hash_STAND["10"]["6"]
-hard_hash_STAND["10"]["7"]
-hard_hash_STAND["10"]["8"]
-hard_hash_STAND["10"]["9"]
+hard_hash_STAND["10"] = hard_hash_HIT
+hard_hash_STAND["10"]["2"] = "Double"
+hard_hash_STAND["10"]["3"] = "Double"
+hard_hash_STAND["10"]["4"] = "Double"
+hard_hash_STAND["10"]["5"] = "Double"
+hard_hash_STAND["10"]["6"] = "Double"
+hard_hash_STAND["10"]["7"] = "Double"
+hard_hash_STAND["10"]["8"] = "Double"
+hard_hash_STAND["10"]["9"] = "Double"
 hard_hash_STAND["11"] = hard_hash_DUB
+hard_hash_STAND["12"] = hard_hash_HIT
 hard_hash_STAND["12"]["2"] = "HIT"
 hard_hash_STAND["12"]["3"] = "HIT"
+hard_hash_STAND["12"]["7"] = "HIT"
+hard_hash_STAND["12"]["8"] = "HIT"
+hard_hash_STAND["12"]["9"] = "HIT"
+hard_hash_STAND["12"]["10"] = "HIT"
+hard_hash_STAND["12"]["A"] = "HIT"
+hard_hash_STAND["13"] = hard_hash_STAND
+hard_hash_STAND["13"]["7"] = "HIT"
+hard_hash_STAND["13"]["8"] = "HIT"
+hard_hash_STAND["13"]["9"] = "HIT"
+hard_hash_STAND["13"]["10"] = "HIT"
+hard_hash_STAND["13"]["A"] = "HIT"
+hard_hash_STAND["14"] = hard_hash_STAND
+hard_hash_STAND["14"]["7"] = "HIT"
+hard_hash_STAND["14"]["8"] = "HIT"
+hard_hash_STAND["14"]["9"] = "HIT"
+hard_hash_STAND["14"]["10"] = "HIT"
+hard_hash_STAND["14"]["A"] = "HIT"
+hard_hash_STAND["15"] = hard_hash_STAND
+hard_hash_STAND["15"]["7"] = "HIT"
+hard_hash_STAND["15"]["8"] = "HIT"
+hard_hash_STAND["15"]["9"] = "HIT"
+hard_hash_STAND["15"]["10"] = "HIT"
+hard_hash_STAND["15"]["A"] = "HIT"
+hard_hash_STAND["16"] = hard_hash_STAND
+hard_hash_STAND["16"]["7"] = "HIT"
+hard_hash_STAND["16"]["8"] = "HIT"
+hard_hash_STAND["16"]["9"] = "HIT"
+hard_hash_STAND["16"]["10"] = "HIT"
+hard_hash_STAND["16"]["A"] = "HIT"
+
+
+=begin
+hard_hash_STAND["13"] = hard_hash_HIT
+hard_hash_STAND["13"]["7"] = "HIT"
+hard_hash_STAND["13"]["8"] = "HIT"
+hard_hash_STAND["13"]["9"] = "HIT"
+hard_hash_STAND["13"]["10"] = "HIT"
+hard_hash_STAND["13"]["A"] = "HIT"
+hard_hash_STAND["14"] = hard_hash_HIT
+
+hard_hash_STAND["15"] = hard_hash_HIT
+hard_hash_STAND["16"] = hard_hash_HIT
+
+
+
 
 
 #  "5" => "DOUBLE OR HIT" , "6" => "DOUBLE OR HIT"
