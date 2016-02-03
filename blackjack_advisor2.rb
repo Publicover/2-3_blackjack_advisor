@@ -63,10 +63,12 @@ hard_hash["6"] = hard_hash_sub1
 hard_hash["7"] = hard_hash_sub1
 hard_hash["8"] = hard_hash_sub1
 hard_hash["8"]["5"] = "Double"
-# {
-#   "5" => "DOUBLE OR HIT" , "6" => "DOUBLE OR HIT"
-# }
+hard_hash["8"]["6"] = "Double"
 
+#  "5" => "DOUBLE OR HIT" , "6" => "DOUBLE OR HIT"
+
+
+=begin
 hard_hash["9"] = {
   "2" => hard_hash_sub2 , "3" => hard_hash_sub2 , "4" => hard_hash_sub2 ,
   "6" => hard_hash_sub2 , "7" => hard_hash_sub2 , "8" => hard_hash_sub2 ,
