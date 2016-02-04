@@ -1,103 +1,169 @@
-=begin
-hard_hash = Hash.new("STAND")
-soft_hash = Hash.new("STAND")
-pair_hash = Hash.new("STAND")
+hard_hash = Hash.new()
 
-# dealer numbers can be represented by a range
-# two values are needed to get an action
-my_first_card = gets.chomp
-my_second_card = gets.chomp
-my_total_number = my_first_card + my_second_card
+hard_hash["5"] = Hash.new("HIT")
+hard_hash["6"] = Hash.new("HIT")
+hard_hash["7"] = Hash.new("HIT")
+hard_hash["8"] = Hash.new("HIT")
+hard_hash["8"]["5"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["8"]["6"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["9"] = Hash.new("HIT")
+hard_hash["9"]["2"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["9"]["3"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["9"]["4"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["9"]["5"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["9"]["6"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["10"] = Hash.new("HIT")
+hard_hash["10"]["2"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["10"]["3"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["10"]["4"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["10"]["5"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["10"]["6"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["10"]["7"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["10"]["8"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["10"]["9"] = "DOUBLE OR HIT! GET IN THERE!"
+hard_hash["11"] = Hash.new("DOUBLE OR HIT! GET IN THERE!")
+hard_hash["12"] = Hash.new("HIT")
+hard_hash["12"]["2"] = "HIT"
+hard_hash["12"]["3"] = "HIT"
+hard_hash["12"]["7"] = "HIT"
+hard_hash["12"]["8"] = "HIT"
+hard_hash["12"]["9"] = "HIT"
+hard_hash["12"]["10"] = "HIT"
+hard_hash["12"]["A"] = "HIT"
+hard_hash["13"] = Hash.new("STAY")
+hard_hash["13"]["7"] = "HIT"
+hard_hash["13"]["8"] = "HIT"
+hard_hash["13"]["9"] = "HIT"
+hard_hash["13"]["10"] = "HIT"
+hard_hash["13"]["A"] = "HIT"
+hard_hash["14"] = Hash.new("STAY")
+hard_hash["14"]["7"] = "HIT"
+hard_hash["14"]["8"] = "HIT"
+hard_hash["14"]["9"] = "HIT"
+hard_hash["14"]["10"] = "HIT"
+hard_hash["14"]["A"] = "HIT"
+hard_hash["15"] = Hash.new("STAY")
+hard_hash["15"]["7"] = "HIT"
+hard_hash["15"]["8"] = "HIT"
+hard_hash["15"]["9"] = "HIT"
+hard_hash["15"]["10"] = "HIT"
+hard_hash["15"]["A"] = "HIT"
+hard_hash["16"] = Hash.new("STAY")
+hard_hash["16"]["7"] = "HIT"
+hard_hash["16"]["8"] = "HIT"
+hard_hash["16"]["9"] = "HIT"
+hard_hash["16"]["10"] = "HIT"
+hard_hash["16"]["A"] = "HIT"
+hard_hash["17"] = Hash.new("STAY")
+hard_hash["18"] = Hash.new("STAY")
+hard_hash["19"] = Hash.new("STAY")
+hard_hash["20"] = Hash.new("STAY")
+hard_hash["21"] = Hash.new("STAY")
+
+soft_hash = Hash.new()
+
+soft_hash["13"] = Hash.new("HIT")
+soft_hash["13"]["4"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["13"]["5"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["13"]["6"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["14"] = Hash.new("HIT")
+soft_hash["14"]["4"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["14"]["5"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["14"]["6"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["15"] = Hash.new("HIT")
+soft_hash["15"]["4"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["15"]["5"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["15"]["6"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["16"] = Hash.new("HIT")
+soft_hash["16"]["4"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["16"]["5"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["16"]["6"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["17"] = Hash.new("HIT")
+soft_hash["17"]["2"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["17"]["3"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["17"]["4"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["17"]["5"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["17"]["6"] = "DOUBLE OR HIT! GET IN THERE!"
+soft_hash["18"] = Hash.new("STAY")
+soft_hash["18"]["3"] = "DOUBLE OR STAY. YOU GOT THIS."
+soft_hash["18"]["4"] = "DOUBLE OR STAY. YOU GOT THIS."
+soft_hash["18"]["5"] = "DOUBLE OR STAY. YOU GOT THIS."
+soft_hash["18"]["6"] = "DOUBLE OR STAY. YOU GOT THIS."
+soft_hash["18"]["9"] = "HIT"
+soft_hash["18"]["10"] = "HIT"
+soft_hash["19"] = Hash.new("STAY")
+soft_hash["19"]["6"] = "DOUBLE OR STAY. YOU GOT THIS."
+soft_hash["20"] = Hash.new("STAY")
+soft_hash["21"] = Hash.new("STAY")
+
+pair_hash = Hash.new()
+
+pair_hash["2"] = Hash.new("SPLIT")
+pair_hash["2"]["8"] = "HIT"
+pair_hash["2"]["9"] = "HIT"
+pair_hash["2"]["10"] = "HIT"
+pair_hash["2"]["11"] = "HIT"
+pair_hash["3"] = Hash.new("SPLIT")
+pair_hash["3"]["9"] = "HIT"
+pair_hash["3"]["10"] = "HIT"
+pair_hash["3"]["11"] = "HIT"
+pair_hash["4"] = Hash.new("HIT")
+pair_hash["4"]["4"] = "STAY"
+pair_hash["4"]["5"] = "STAY"
+pair_hash["4"]["6"] = "STAY"
+pair_hash["5"] = Hash.new("DOUBLE OR HIT! GET IN THERE!")
+pair_hash["5"]["10"] = "HIT"
+pair_hash["5"]["11"] = "HIT"
+pair_hash["6"] = Hash.new("SPLIT")
+pair_hash["6"]["8"] = "HIT"
+pair_hash["6"]["9"] = "HIT"
+pair_hash["6"]["10"] = "HIT"
+pair_hash["6"]["11"] = "HIT"
+pair_hash["8"] = Hash.new("SPLIT")
+pair_hash["9"] = Hash.new("SPLIT")
+pair_hash["9"]["7"] = "STAND"
+pair_hash["9"]["10"] = "STAND"
+pair_hash["9"]["11"] = "STAND"
+pair_hash["10"] = Hash.new("STAND")
+pair_hash["11"] = Hash.new("SPLIT")
+
+puts "\nPlease be patient: I'm still a noob."
+puts "So, in the following questions, face cards each equal ten"
+puts "and the ace is typed \"A\"\n"
+
+puts "\nWhat's your first card?"
+first_card = gets.chomp
+if first_card == "A"
+  got_ace = true
+  first_card = 11
+else
+  got_ace = false
+end
+
+puts "\nWhat's your second card?"
+second_card = gets.chomp
+if second_card == "A"
+  got_ace = true
+  second_card = 11
+else
+  got_ace = false
+end
+
+puts "\nWhat does the dealer show?"
 dealer_card = gets.chomp
+if dealer_card == "A"
+  dealer_card = "11"
+end
 
-# key is your number, value is action
-
-["21", "2..A"] => "STAND"
-["21"] => {"2..A", "STAND"}
-
-#dealer's hand is key
-
-hard_hash = {"5" => {["2", "3", "4"] => "HIT"}}
-
-hard_hash["5"] = {"2" => "HIT" , "3" => "HIT" , "4" => "HIT" , "5" => "HIT" ,
-  "6" => "HIT" , "7" => "HIT" , "8" => "HIT" , "9" => "HIT" , "10" => "HIT" ,
-  "A" => "HIT"}
-=end
-
-=begin
-hard_hash["17"] =
-  {
-    "2" => "STAND" , "3" => "STAND" , "4" => "STAND" ,
-  "5" => "STAND" , "6" => "STAND" , "7" => "STAND" , "8" => "STAND" ,
-  "9" => "STAND" , "10" => "STAND" , "A" => "STAND"}
-
-hard_hash["8"] = {
-    "5" => "DOUBLE OR HIT" , "6" => "DOUBLE OR HIT"
-}
-
-hard_hash["9"] = {
-  "2" => "DOUBLE OR HIT" , "3" => "DOUBLE OR HIT" , "4" => "DOUBLE OR HIT" ,
-  "5" => "DOUBLE OR HIT" , "6" => "DOUBLE OR HIT"
-}
-
-hard_hash["10"] = {
-  "2" => "DOUBLE OR HIT" , "3" => "DOUBLE OR HIT" , "4" => "DOUBLE OR HIT" ,
-  "5" => "DOUBLE OR HIT" , "6" => "DOUBLE OR HIT" , "7" => "DOUBLE OR HIT" ,
-  "8" => "DOUBLE OR HIT" , "9" => "DOUBLE OR HIT"
-}
-=end
-
-# delete everything with default value of STAND
-# sub_hash default is HIT
-
-
-
-# ************ USE SUB ARRAY WITH ITS OWN DEFAULT VALUE **************
-
-hard_hash = Hash.new("STAND")
-hard_hash_sub1 = Hash.new("HIT")
-hard_hash_sub2 = Hash.new("DOUBLE OR HIT")
-
-hard_hash["5"] = hard_hash_sub1
-hard_hash["6"] = hard_hash_sub1
-hard_hash["7"] = hard_hash_sub1
-hard_hash["8"] = hard_hash_sub1
-hard_hash["8"]["5"] = "Double"
-# {
-#   "5" => "DOUBLE OR HIT" , "6" => "DOUBLE OR HIT"
-# }
-
-hard_hash["9"] = {
-  "2" => hard_hash_sub2 , "3" => hard_hash_sub2 , "4" => hard_hash_sub2 ,
-  "6" => hard_hash_sub2 , "7" => hard_hash_sub2 , "8" => hard_hash_sub2 ,
-  "9" => hard_hash_sub2
-}
-=begin
-"10"
-"11"
-"12"
-"13"
-"14"
-"15"
-hard_hash["16"] =
-=end
-
-
-puts "What card do you have?"
-my_first_card = gets.chomp
-puts "What's your second card?"
-my_second_card = gets.chomp
-my_total_number = my_first_card.to_i + my_second_card.to_i
-my_total_number = my_total_number.to_s
-puts "What does the dealer have?"
-dealer_card = gets.chomp
-
-puts hard_hash[my_total_number][dealer_card]
-
-=begin
-hash = {"Mason" => {"home" =>"919",
-                    "mobile" => "282",
-                    "fax" => "383"},
-        "Da-Me" => ["444"],
-        "Blake" => ["323", "929"]}
-=end
+card_total = first_card.to_i + second_card.to_i
+card_total = card_total.to_s
+if card_total == "22"
+  puts "SPLIT, DOUBLE DOWN, BUY EVERYONE A BEER, WHOOP, CHEER."
+  puts "Buy some lotto tickets, too. YOU HAVE ARRIVED!"
+elsif first_card == second_card
+  puts pair_hash[card_total][dealer_card]
+elsif got_ace == true
+  puts soft_hash[card_total][dealer_card]
+else
+  puts hard_hash[card_total][dealer_card]
+end
