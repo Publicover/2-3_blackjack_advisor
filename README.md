@@ -9,6 +9,6 @@ Exceptions are noted and written out explicitly.
 The if statements at the end first account for a pair of aces, then any pair, then any user hand with an ace, 
 then any old hand since the odds tables are different from each. 
 
-You will be asked what two cards you have and what card the dealer is showing. enter them and let the magic wash over you. 
+You will be asked what two cards you have and what card the dealer is showing. Enter them and let the magic wash over you. 
 
 This was part of a homework assignment getting ready for handling API information. 
